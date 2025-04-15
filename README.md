@@ -39,6 +39,9 @@ streamlit run app/streamlit_app.py
 
 ---
 
+Tech Stack: Python · XGBoost · Scikit-learn · Streamlit · NLTK · Pandas · TF-IDF · Matplotlib · Seaborn · Git · GitHub
+
+---
 
 ## Author
 
