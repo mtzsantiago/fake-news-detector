@@ -14,6 +14,14 @@ This project uses machine learning to detect fake news articles based on their c
 
 ---
 
+## Screenshots
+
+![real_news_screenshot](https://github.com/user-attachments/assets/276e7437-90b7-47ad-9aee-c48e6e1b5444)
+
+![fake_news_screenshot](https://github.com/user-attachments/assets/0d7ceaa5-c991-4dd5-accf-157c42ba1a01)
+
+---
+
 ## Model Performance (XGBoost)
 
 | Metric     | Score     |
