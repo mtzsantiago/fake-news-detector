@@ -16,8 +16,10 @@ This project uses machine learning to detect fake news articles based on their c
 
 ## Screenshots
 
+Example of real news:
 ![real_news_screenshot](https://github.com/user-attachments/assets/276e7437-90b7-47ad-9aee-c48e6e1b5444)
 
+Example of fake news:
 ![fake_news_screenshot](https://github.com/user-attachments/assets/0d7ceaa5-c991-4dd5-accf-157c42ba1a01)
 
 ---
