@@ -55,4 +55,4 @@ Tech Stack: Python · XGBoost · Scikit-learn · Streamlit · NLTK · Pandas · 
 
 ## Author
 
-Built by Santiago Martínez — systems engineer & data scientist
+Built by Santiago Martínez — computer systems engineer
