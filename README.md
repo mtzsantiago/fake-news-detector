@@ -1,6 +1,12 @@
 # Fake News Classifier
 
-This project uses machine learning to detect fake news articles based on their content. Built with Python, trained on a labeled Kaggle dataset, and deployed via Streamlit.
+This project uses machine learning to detect fake news articles based on their content. Built with Python and deployed via Streamlit.
+
+---
+
+## Dataset
+
+Trained on the [Kaggle Fake News competition dataset](https://www.kaggle.com/c/fake-news) (`train.csv`), where each article has `title`, `author`, `text` and a binary `label` (1 = unreliable, 0 = reliable). Only `train.csv` is used, since the competition's `test.csv` has no labels; it is split into train/test sets for evaluation.
 
 ---
 
