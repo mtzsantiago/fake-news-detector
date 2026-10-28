@@ -2,11 +2,19 @@
 
 This project uses machine learning to detect fake news articles based on their content. Built with Python and deployed via Streamlit.
 
+Live demo: https://mtzsantiago-fake-news-detector.streamlit.app/
+
 ---
 
 ## Dataset
 
-Trained on the [Kaggle Fake News competition dataset](https://www.kaggle.com/c/fake-news) (`train.csv`), where each article has `title`, `author`, `text` and a binary `label` (1 = unreliable, 0 = reliable). Only `train.csv` is used, since the competition's `test.csv` has no labels; it is split into train/test sets for evaluation.
+Trained on the [Kaggle Fake News competition dataset](https://www.kaggle.com/c/fake-news) (`train.csv`, 20,800 articles; 20,761 after dropping rows with missing text). Each article has a binary `label` (1 = unreliable, 0 = reliable). Only `train.csv` is used, since the competition's `test.csv` has no labels. The `author` column is dropped, and the model uses article title + text only.
+
+---
+
+## Preprocessing
+
+Lowercasing, removal of non-alphabetic characters and stopwords, lemmatization (NLTK), and filtering to English vocabulary. Text is vectorized with TF-IDF (5,000 features, `min_df=5`) and split 80/20 (stratified, `random_state=42`) before fitting the vectorizer, so the test set stays unseen.
 
 ---
 
@@ -17,6 +25,15 @@ Trained on the [Kaggle Fake News competition dataset](https://www.kaggle.com/c/f
 -  Model evaluation: Accuracy, Precision, Recall, F1, ROC AUC, Confusion Matrix
 -  Word importance plots for interpretability
 -  Live Streamlit app with text input + prediction
+-  NLP preprocessing: stopword removal, lemmatization, English-vocabulary filtering
+  
+---
+
+## Limitations
+
+- Trained on a 2016-era English news dataset focused mostly on US politics, so it may not generalize to other topics, regions or time periods.
+- It learns writing style and vocabulary patterns, not factual accuracy. A well-written false article can be classified as real, and a plain true one as fake.
+- Low-confidence predictions (close to 50%) should be treated as uncertain.
 
 ---
 
@@ -44,14 +61,14 @@ Example of fake news:
 
 ## Try It Locally
 
-1. Clone the repo  
-2. Install requirements  
-
+```bash
+git clone https://github.com/mtzsantiago/fake-news-detector.git
+cd fake-news-detector
 pip install -r app/requirements.txt
-
-3. Run the app  
-
 streamlit run app/streamlit_app.py
+```
+
+NLTK data is downloaded automatically on first run.
 
 ---
 
@@ -61,4 +78,4 @@ Tech Stack: Python · XGBoost · Scikit-learn · Streamlit · NLTK · Pandas · 
 
 ## Author
 
-Built by Santiago Martínez — computer systems engineer
+Built by Santiago Martínez — Computer Systems Engineering graduate. [LinkedIn](https://www.linkedin.com/in/mtzsantiago/)
