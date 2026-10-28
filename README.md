@@ -30,14 +30,14 @@ Example of fake news:
 
 ---
 
-## Model Performance (XGBoost)
+## Model Comparison
 
-| Metric     | Score     |
-|------------|-----------|
-| Accuracy   | 94.25%    |
-| Precision  | 93.10%    |
-| Recall     | 95.57%    |
-| F1 Score   | 94.32%    |
+| Model | Accuracy | Precision | Recall | F1 |
+|---|---|---|---|---|
+| Naive Bayes | 84.90% | 88.63% | 80.05% | 84.12% |
+| Random Forest | 92.03% | 92.33% | 91.66% | 92.00% |
+| Logistic Regression | 92.05% | 91.57% | 92.63% | 92.09% |
+| **XGBoost** | **93.88%** | **92.49%** | **95.52%** | **93.98%** |
 
 
 ---
